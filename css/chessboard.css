@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+.board {
+  position: relative;
+  width: calc(640px);
+  margin: 70px auto;
+  background: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+}
+.row {
+  clear: both;
+}
+.tile {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+.row:nth-child(odd) .tile:nth-child(odd) {
+  background: #aaa;
+}
+.row:nth-child(even) .tile:nth-child(even) {
+  background: #aaa;
+}
+ul.columns {
+  float: left;
+}
+ul.columns li {
+  width: 80px;
+  height: 80px;
+}
+.piece::after {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  font-size: calc(60px);
+  line-height: 80px;
+  text-align: center;
+}
+.piece.x1::after {
+  left: calc(0px);
+}
+.piece.x2::after {
+  left: calc(80px);
+}
+.piece.x3::after {
+  left: calc(160px);
+}
+.piece.x4::after {
+  left: calc(240px);
+}
+.piece.x5::after {
+  left: calc(320px);
+}
+.piece.x6::after {
+  left: calc(400px);
+}
+.piece.x7::after {
+  left: calc(480px);
+}
+.piece.x8::after {
+  left: calc(560px);
+}
+.piece.y1::after {
+  top: calc(0px);
+}
+.piece.y2::after {
+  top: calc(80px);
+}
+.piece.y3::after {
+  top: calc(160px);
+}
+.piece.y4::after {
+  top: calc(240px);
+}
+.piece.y5::after {
+  top: calc(320px);
+}
+.piece.y6::after {
+  top: calc(400px);
+}
+.piece.y7::after {
+  top: calc(480px);
+}
+.piece.y8::after {
+  top: calc(560px);
+}
+.piece.w-king::after {
+  content: "\2654";
+}
+.piece.w-queen::after {
+  content: "\2655";
+}
+.piece.w-rook::after {
+  content: "\2656";
+}
+.piece.w-bishop::after {
+  content: "\2657";
+}
+.piece.w-knight::after {
+  content: "\2658";
+}
+.piece.w-pawn::after {
+  content: "\2659";
+}
+.piece.b-king::after {
+  content: "\265A";
+}
+.piece.b-queen::after {
+  content: "\265B";
+}
+.piece.b-rook::after {
+  content: "\265C";
+}
+.piece.b-bishop::after {
+  content: "\265D";
+}
+.piece.b-knight::after {
+  content: "\265E";
+}
+.piece.b-pawn::after {
+  content: "\265F";
+}

@@ -1,0 +1,90 @@
+// Variables
+@tileSize: 80px;
+@baseColor:#fff;
+@accentColor:#aaa;
+
+@defaultShadowSize: 50px;
+
+// MIXINS
+.ALL-SIDES(@shadowSize: @defaultShadowSize) { 
+    box-shadow: 0 0 @shadowSize rgba(0,0,0,0.6); 
+    -moz-box-shadow: 0 0 @shadowSize rgba(0,0,0,0.6); 
+    -webkit-box-shadow: 0 0 @shadowSize rgba(0,0,0,0.6); 
+    -o-box-shadow: 0 0 @shadowSize rgba(0,0,0,0.6); 
+} 
+
+
+// RESET 
+* {
+    box-sizing: border-box;
+} 
+
+.board {
+    position: relative;
+    width: calc(@tileSize * 8);
+    margin: 70px auto;
+    background: @baseColor; 
+    .ALL-SIDES;
+}
+
+.row {clear:both; }
+
+.tile {
+    width: @tileSize;
+    height: @tileSize;
+    // border: 1px solid #000;
+    float: left;
+}
+
+.row:nth-child(odd) .tile:nth-child(odd) {background: @accentColor; }
+.row:nth-child(even) .tile:nth-child(even) {background: @accentColor; }
+
+ul.columns { float: left;}
+ul.columns li {
+    width: @tileSize;
+    height: @tileSize;
+}
+
+.piece::after {
+    position: absolute;
+    width: @tileSize;
+    height: @tileSize;
+    background-color: transparent;
+    font-size: calc(@tileSize * .75);
+    line-height: @tileSize;
+    text-align: center;
+}
+
+.piece.x1::after {left: calc(@tileSize * 0);}
+.piece.x2::after {left: calc(@tileSize * 1);}
+.piece.x3::after {left: calc(@tileSize * 2);}
+.piece.x4::after {left: calc(@tileSize * 3);}
+.piece.x5::after {left: calc(@tileSize * 4);}
+.piece.x6::after {left: calc(@tileSize * 5);}
+.piece.x7::after {left: calc(@tileSize * 6);}
+.piece.x8::after {left: calc(@tileSize * 7);}
+
+.piece.y1::after {top: calc(@tileSize * 0);}
+.piece.y2::after {top: calc(@tileSize * 1);}
+.piece.y3::after {top: calc(@tileSize * 2);}
+.piece.y4::after {top: calc(@tileSize * 3);}
+.piece.y5::after {top: calc(@tileSize * 4);}
+.piece.y6::after {top: calc(@tileSize * 5);}
+.piece.y7::after {top: calc(@tileSize * 6);}
+.piece.y8::after {top: calc(@tileSize * 7);}
+
+.piece.w-king::after { content: "\2654"; }
+.piece.w-queen::after { content: "\2655"; }
+.piece.w-rook::after { content: "\2656"; }
+.piece.w-bishop::after { content: "\2657"; }
+.piece.w-knight::after { content: "\2658"; }
+.piece.w-pawn::after { content: "\2659"; }
+
+.piece.b-king::after { content: "\265A"; }
+.piece.b-queen::after { content: "\265B"; }
+.piece.b-rook::after { content: "\265C"; }
+.piece.b-bishop::after { content: "\265D"; }
+.piece.b-knight::after { content: "\265E"; }
+.piece.b-pawn::after { content: "\265F"; }
+
+
