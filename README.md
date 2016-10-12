@@ -8,8 +8,7 @@
     * systemjs / webpack
     * .less - if/else?  loops?
 
-## Create Layout ##
- What is .less?  
+## Create Layout - less ## 
     * css compiler language
     * uses regular css
     * can use @Variables

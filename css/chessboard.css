@@ -1,127 +1,77 @@
+
 * {
-  box-sizing: border-box;
-}
+    box-sizing: border-box;
+} 
+
 .board {
-  position: relative;
-  width: calc(640px);
-  margin: 70px auto;
-  background: #fff;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
-  -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
-  -o-box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+    width: calc(80px * 8);
+    margin: 70px auto;
+    background: #fff; 
+    box-shadow: 0 0 50px rgba(0,0,0,0.6); 
+    -moz-box-shadow: 0 0 50px rgba(0,0,0,0.6); 
+    -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.6); 
+    -o-box-shadow: 0 0 50px rgba(0,0,0,0.6); 
 }
-.row {
-  clear: both;
-}
+
 .tile {
-  width: 80px;
-  height: 80px;
-  float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #000;
+    float: left;
 }
-.row:nth-child(odd) .tile:nth-child(odd) {
-  background: #aaa;
-}
-.row:nth-child(even) .tile:nth-child(even) {
-  background: #aaa;
-}
-ul.columns {
-  float: left;
-}
-ul.columns li {
-  width: 80px;
-  height: 80px;
-}
+
+.tile.even:nth-child(odd) {background: #aaa; }
+.tile.odd:nth-child(even) {background: #aaa; }
+
 .piece::after {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background-color: transparent;
-  font-size: calc(60px);
-  line-height: 80px;
-  text-align: center;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    font-size: calc(80px * .75);
+    line-height: 80px;
+    text-align: center;
 }
-.piece.x1::after {
-  left: calc(0px);
-}
-.piece.x2::after {
-  left: calc(80px);
-}
-.piece.x3::after {
-  left: calc(160px);
-}
-.piece.x4::after {
-  left: calc(240px);
-}
-.piece.x5::after {
-  left: calc(320px);
-}
-.piece.x6::after {
-  left: calc(400px);
-}
-.piece.x7::after {
-  left: calc(480px);
-}
-.piece.x8::after {
-  left: calc(560px);
-}
-.piece.y1::after {
-  top: calc(0px);
-}
-.piece.y2::after {
-  top: calc(80px);
-}
-.piece.y3::after {
-  top: calc(160px);
-}
-.piece.y4::after {
-  top: calc(240px);
-}
-.piece.y5::after {
-  top: calc(320px);
-}
-.piece.y6::after {
-  top: calc(400px);
-}
-.piece.y7::after {
-  top: calc(480px);
-}
-.piece.y8::after {
-  top: calc(560px);
-}
-.piece.w-king::after {
-  content: "\2654";
-}
-.piece.w-queen::after {
-  content: "\2655";
-}
-.piece.w-rook::after {
-  content: "\2656";
-}
-.piece.w-bishop::after {
-  content: "\2657";
-}
-.piece.w-knight::after {
-  content: "\2658";
-}
-.piece.w-pawn::after {
-  content: "\2659";
-}
-.piece.b-king::after {
-  content: "\265A";
-}
-.piece.b-queen::after {
-  content: "\265B";
-}
-.piece.b-rook::after {
-  content: "\265C";
-}
-.piece.b-bishop::after {
-  content: "\265D";
-}
-.piece.b-knight::after {
-  content: "\265E";
-}
-.piece.b-pawn::after {
-  content: "\265F";
-}
+
+.piece.fa::after {left: calc(80px * 0);}
+.piece.fb::after {left: calc(80px * 1);}
+.piece.fc::after {left: calc(80px * 2);}
+.piece.fd::after {left: calc(80px * 3);}
+.piece.fe::after {left: calc(80px * 4);}
+.piece.ff::after {left: calc(80px * 5);}
+.piece.fg::after {left: calc(80px * 6);}
+.piece.fh::after {left: calc(80px * 7);}
+
+.piece.r8::after {top: calc(80px * 0);}
+.piece.r7::after {top: calc(80px * 1);}
+.piece.r6::after {top: calc(80px * 2);}
+.piece.r5::after {top: calc(80px * 3);}
+.piece.r4::after {top: calc(80px * 4);}
+.piece.r3::after {top: calc(80px * 5);}
+.piece.r2::after {top: calc(80px * 6);}
+.piece.r1::after {top: calc(80px * 7);}
+
+/*.piece.w-king::after { content: "\2654"; }
+.piece.w-queen::after { content: "\2655"; }
+.piece.w-rook::after { content: "\2656"; }
+.piece.w-bishop::after { content: "\2657"; }
+.piece.w-knight::after { content: "\2658"; }
+.piece.w-pawn::after { content: "\2659"; }
+.piece.b-king::after { content: "\265A"; }
+.piece.b-queen::after { content: "\265B"; }
+.piece.b-rook::after { content: "\265C"; }
+.piece.b-bishop::after { content: "\265D"; }
+.piece.b-knight::after { content: "\265E"; }
+.piece.b-pawn::after { content: "\265F"; }*/
+
+
+.piece.white::after { color: #f00;}
+.piece.black::after { color: #000;}
+
+.piece.king::after { content: "\2654"; }
+.piece.queen::after { content: "\2655"; }
+.piece.rook::after { content: "\2656"; }
+.piece.bishop::after { content: "\2657"; }
+.piece.knight::after { content: "\2658"; }
+.piece.pawn::after { content: "\2659"; }

@@ -7,7 +7,8 @@
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings"
+    "typings": "typings",
+    "less": "lessc chessboard.less > output.css"
   },
   "license": "ISC",
   "dependencies": {
