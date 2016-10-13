@@ -20,54 +20,23 @@
     border: 1px solid #000;
     float: left;
 }
-
 .tile.even:nth-child(odd) {background: #aaa; }
 .tile.odd:nth-child(even) {background: #aaa; }
 
-.piece::after {
+
+.piece {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
     background-color: transparent;
     font-size: calc(80px * .75);
     line-height: 80px;
     text-align: center;
 }
-.piece::after:hover {
+
+.piece:hover {
     cursor: hand;
 }
-
-.piece.fa::after {left: calc(80px * 0);}
-.piece.fb::after {left: calc(80px * 1);}
-.piece.fc::after {left: calc(80px * 2);}
-.piece.fd::after {left: calc(80px * 3);}
-.piece.fe::after {left: calc(80px * 4);}
-.piece.ff::after {left: calc(80px * 5);}
-.piece.fg::after {left: calc(80px * 6);}
-.piece.fh::after {left: calc(80px * 7);}
-
-.piece.r8::after {top: calc(80px * 0);}
-.piece.r7::after {top: calc(80px * 1);}
-.piece.r6::after {top: calc(80px * 2);}
-.piece.r5::after {top: calc(80px * 3);}
-.piece.r4::after {top: calc(80px * 4);}
-.piece.r3::after {top: calc(80px * 5);}
-.piece.r2::after {top: calc(80px * 6);}
-.piece.r1::after {top: calc(80px * 7);}
-
-/*.piece.w-king::after { content: "\2654"; }
-.piece.w-queen::after { content: "\2655"; }
-.piece.w-rook::after { content: "\2656"; }
-.piece.w-bishop::after { content: "\2657"; }
-.piece.w-knight::after { content: "\2658"; }
-.piece.w-pawn::after { content: "\2659"; }
-.piece.b-king::after { content: "\265A"; }
-.piece.b-queen::after { content: "\265B"; }
-.piece.b-rook::after { content: "\265C"; }
-.piece.b-bishop::after { content: "\265D"; }
-.piece.b-knight::after { content: "\265E"; }
-.piece.b-pawn::after { content: "\265F"; }*/
-
 
 .piece.white::after { color: #00f;}
 .piece.black::after { color: #000;}

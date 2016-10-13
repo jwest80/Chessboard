@@ -1,11 +1,12 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule }         from '@angular/core';
+import { CommonModule }     from '@angular/common';
+import { BrowserModule }    from '@angular/platform-browser';
 
-import { AppComponent }   from './app.component';
-import { ChessboardComponent } from './chessboard/chessboard.component';
+import { AppComponent }         from './app.component';
+import { ChessboardComponent }  from './chessboard/chessboard.component';
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ BrowserModule, CommonModule ],
   declarations: [ 
     AppComponent ,
     ChessboardComponent,
