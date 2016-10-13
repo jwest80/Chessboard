@@ -9,8 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var tiles_1 = require('./tiles');
-var piece_1 = require('./piece');
+var model_1 = require('./model');
 var ChessboardService = (function () {
     function ChessboardService() {
     }
@@ -18,12 +17,12 @@ var ChessboardService = (function () {
     //     return TILES;
     // }
     ChessboardService.prototype.getTiles = function () {
-        console.log(tiles_1.TILES);
-        return Promise.resolve(tiles_1.TILES);
+        console.log(model_1.TILES);
+        return Promise.resolve(model_1.TILES);
     };
     ChessboardService.prototype.getPieces = function () {
-        console.log(piece_1.PIECES);
-        return Promise.resolve(piece_1.PIECES);
+        console.log(model_1.PIECES);
+        return Promise.resolve(model_1.PIECES);
     };
     ChessboardService = __decorate([
         core_1.Injectable(), 

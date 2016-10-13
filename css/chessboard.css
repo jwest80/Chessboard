@@ -33,6 +33,9 @@
     line-height: 80px;
     text-align: center;
 }
+.piece::after:hover {
+    cursor: hand;
+}
 
 .piece.fa::after {left: calc(80px * 0);}
 .piece.fb::after {left: calc(80px * 1);}
@@ -66,7 +69,7 @@
 .piece.b-pawn::after { content: "\265F"; }*/
 
 
-.piece.white::after { color: #f00;}
+.piece.white::after { color: #00f;}
 .piece.black::after { color: #000;}
 
 .piece.king::after { content: "\2654"; }

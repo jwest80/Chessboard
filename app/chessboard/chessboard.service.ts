@@ -1,9 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Tile } from './tiles';
-import { TILES } from './tiles';
-import { Piece } from './piece';
-import { PIECES } from './piece';
+import { Tile, TILES, Piece, PIECES } from './model';
 
 @Injectable()
 export class ChessboardService {
