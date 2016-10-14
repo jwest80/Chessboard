@@ -4,11 +4,18 @@
 
 ## To Do List ##
     * Rotate Chessboard
-    * Drag and Drop pieces
+    * Add/Remove Piece funtions
+        * Unit Testing 
+    * Change Appearence
+    * Drag and Drop pieces - 
+        * Read HTML5 Docs: https://html.spec.whatwg.org/#dnd
         * Drop Anywhere
-        * Drop on tiles (squares)
-        * Drop on legal moves
-        * 
+        * Add/Remove pieces from board
+        * Allow Drop on tiles (squares)
+        * Conflict Detection (cant drop on own pieces, remove enemy pieces)
+        * Allow Drop on legal moves?
+        * Record and display move List
+        * Allow iteration through moves
     * Learn to use SASS?
     * Read about: systemjs / webpack
 
