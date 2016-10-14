@@ -1,7 +1,5 @@
 <div class="board container">
 
-	<!--<div *ngFor="let piece of pieces" class="piece {{piece.type}} {{piece.color}} r{{piece.rank}} f{{piece.file}}"></div>-->
-
 	<div *ngFor="let tile of tiles" class="tile {{(tile.rank % 2) === 1 ? 'odd' : 'even'}}">
 
 		<div *ngIf="tile.piece"
