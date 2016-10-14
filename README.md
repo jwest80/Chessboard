@@ -24,8 +24,8 @@
     * can use @Variables
     * can use .MIXINS  (like nested css classes - child/parent objects)
 
-    ** Install:  \> npm install less -g **
-    ** Compile:  \> lessc input.less > output.css **
+** Install:  \> `npm install less -g` **
+** Compile:  \> `lessc input.less > output.css` **
 
 Simple less example:  *(Deprecated: Chessboard html markup has different structure than used by rest of application.)*
 less
@@ -51,7 +51,7 @@ less
         |    ---main.ts
         |---index.html
 
-    ** Run Application: \> npm start **
+** Run Application: \> `npm start` **
 
 ## Create Chessboard
 
