@@ -20,9 +20,13 @@
     border: 1px solid #000;
     float: left;
 }
-.tile.even:nth-child(odd) {background: #aaa; }
-.tile.odd:nth-child(even) {background: #aaa; }
 
+.board:not(.flipped) .tile.odd:nth-child(odd) {background: #aaa; }
+.board:not(.flipped) .tile.even:nth-child(even) {background: #aaa; }
+.board.flipped .tile.even:nth-child(odd) {background: #aaa; }
+.board.flipped .tile.odd:nth-child(even) {background: #aaa; }
+
+.board .tile span.position { position: absolute; margin: 1px 3px; }
 
 .piece {
     position: absolute;
@@ -32,6 +36,10 @@
     font-size: calc(80px * .75);
     line-height: 80px;
     text-align: center;
+}
+
+.piece.selected {
+    background-color: yellow;
 }
 
 .piece:hover {

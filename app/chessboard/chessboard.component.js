@@ -13,8 +13,42 @@ var chessboard_service_1 = require('./chessboard.service');
 var ChessboardComponent = (function () {
     function ChessboardComponent(chessboardService) {
         this.chessboardService = chessboardService;
+        this.flipped = false;
+        this.showPosition = false;
     }
-    // Functions
+    // Select Piece
+    ChessboardComponent.prototype.onSelectSource = function (event, tile) {
+        if (!this.sourceTile) {
+            event.stopPropagation();
+            this.sourceTile = tile;
+            this.sourceTile.selected = true;
+        }
+        else if (this.sourceTile === tile) {
+            event.stopPropagation();
+            tile.selected = false;
+            this.sourceTile = null;
+        }
+    };
+    // Select Target to move Piece
+    ChessboardComponent.prototype.onSelectTarget = function (tile) {
+        if (this.sourceTile) {
+            tile.piece = this.sourceTile.piece;
+            this.sourceTile.piece = null;
+            this.sourceTile.selected = false;
+            this.sourceTile = null;
+        }
+        else {
+            console.log('No SOurce Tile');
+            console.log(tile);
+        }
+    };
+    ChessboardComponent.prototype.flipBoard = function () {
+        this.flipped = !this.flipped;
+    };
+    ChessboardComponent.prototype.toggleShowPosition = function () {
+        this.showPosition = !this.showPosition;
+    };
+    // Data Functions
     ChessboardComponent.prototype.getTiles = function () {
         var _this = this;
         this.chessboardService.getTiles().then(function (tiles) { return _this.tiles = tiles; });

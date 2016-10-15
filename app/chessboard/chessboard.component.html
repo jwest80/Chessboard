@@ -1,10 +1,15 @@
-<div class="board container">
+<div class="board container {{flipped ? 'flipped' : ''}}">
 
-	<div *ngFor="let tile of tiles" class="tile {{(tile.rank % 2) === 1 ? 'odd' : 'even'}}">
+	<div *ngFor="let tile of tiles | reverse:flipped" 
+        class="tile {{(tile.rank % 2) === 1 ? 'odd' : 'even'}}"
+        (click)="onSelectTarget(tile)">
+
+        <span [hidden]="!showPosition" class="position">{{tile.position}}</span>
 
 		<div *ngIf="tile.piece"
             class="piece {{tile.piece?.type}} {{tile.piece?.color}}"
-            draggable="true">
+            (click)="onSelectSource($event, tile)"
+            [ngClass]="{'selected': tile.selected}">
 		</div>
 
 	</div>
@@ -12,3 +17,7 @@
 	<div style="clear:both;"></div>
 
 </div>
+
+Selected Piece: {{sourceTile | json}} <br />
+<input type="button" (click)="flipBoard()" value="Flip Board" /> <br />
+<input type="button" (click)="toggleShowPosition()" value="{{showPosition ? 'Hide Positions' : 'Show Positions'}}" />

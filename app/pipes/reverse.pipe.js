@@ -9,27 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var common_1 = require('@angular/common');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var chessboard_component_1 = require('./chessboard/chessboard.component');
-var reverse_pipe_1 = require('./pipes/reverse.pipe');
-var AppModule = (function () {
-    function AppModule() {
+var ReversePipe = (function () {
+    function ReversePipe() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, common_1.CommonModule],
-            declarations: [
-                app_component_1.AppComponent,
-                chessboard_component_1.ChessboardComponent,
-                reverse_pipe_1.ReversePipe,
-            ],
-            bootstrap: [app_component_1.AppComponent]
+    ReversePipe.prototype.transform = function (value, flipped) {
+        console.log(flipped);
+        if (value) {
+            if (flipped)
+                return value.slice().reverse();
+            else
+                return value;
+        }
+        else {
+            return [];
+        }
+    };
+    ReversePipe = __decorate([
+        core_1.Pipe({
+            name: 'reverse'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], ReversePipe);
+    return ReversePipe;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.ReversePipe = ReversePipe;
+//# sourceMappingURL=reverse.pipe.js.map

@@ -11,9 +11,14 @@ export class Piece {
   color: string;
 }
 
+export class SelectedPiece extends Piece {
+  public static get selected():boolean { return true; }
+}
+
 export class Tile extends Position {
   id: number;
   piece?: Piece;
+  selected?: boolean;
 }
 
 // Tiles with starting pieces
@@ -22,8 +27,8 @@ export const TILES: Tile[] = [
   {id: 1, position: 'a8', rank: '8', file: 'a', piece: {id: 1, type: 'rook', color: 'black'}},
   {id: 2, position: 'b8', rank: '8', file: 'b', piece: {id: 2, type: 'knight', color: 'black'}},
   {id: 3, position: 'c8', rank: '8', file: 'c', piece: {id: 3, type: 'bishop', color: 'black'}},
-  {id: 4, position: 'd8', rank: '8', file: 'd', piece: {id: 4, type: 'king', color: 'black'}},
-  {id: 5, position: 'e8', rank: '8', file: 'e', piece: {id: 5, type: 'queen', color: 'black'}},
+  {id: 4, position: 'd8', rank: '8', file: 'd', piece: {id: 4, type: 'queen', color: 'black'}},
+  {id: 5, position: 'e8', rank: '8', file: 'e', piece: {id: 5, type: 'king', color: 'black'}},
   {id: 6, position: 'f8', rank: '8', file: 'f', piece: {id: 6, type: 'bishop', color: 'black'}},
   {id: 7, position: 'g8', rank: '8', file: 'g', piece: {id: 7, type: 'knight', color: 'black'}},
   {id: 8, position: 'h8', rank: '8', file: 'h', piece: {id: 8, type: 'rook', color: 'black'}},
@@ -85,8 +90,8 @@ export const TILES: Tile[] = [
   {id: 1, position: 'a1', rank: '1', file: 'a', piece: {id: 25, type: 'rook', color: 'white'}},
   {id: 2, position: 'b1', rank: '1', file: 'b', piece: {id: 26, type: 'knight', color: 'white'}},
   {id: 3, position: 'c1', rank: '1', file: 'c', piece: {id: 27, type: 'bishop', color: 'white'}},
-  {id: 4, position: 'd1', rank: '1', file: 'd', piece: {id: 28, type: 'king', color: 'white'}},
-  {id: 5, position: 'e1', rank: '1', file: 'e', piece: {id: 29, type: 'queen', color: 'white'}},
+  {id: 4, position: 'd1', rank: '1', file: 'd', piece: {id: 28, type: 'queen', color: 'white'}},
+  {id: 5, position: 'e1', rank: '1', file: 'e', piece: {id: 29, type: 'king', color: 'white'}},
   {id: 6, position: 'f1', rank: '1', file: 'f', piece: {id: 30, type: 'bishop', color: 'white'}},
   {id: 7, position: 'g1', rank: '1', file: 'g', piece: {id: 31, type: 'knight', color: 'white'}},
   {id: 8, position: 'h1', rank: '1', file: 'h', piece: {id: 32, type: 'rook', color: 'white'}},

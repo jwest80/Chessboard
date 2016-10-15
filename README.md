@@ -1,19 +1,19 @@
 # Chessboard
 
 ## To Do List
-    * Rotate Chessboard
+    * ~~Rotate Chessboard~~
+    * ~~Click to move~~
+    * ~~Flip Board~~
+    * Record and display move List
+        * Allow iteration through moves
     * Add/Remove Piece funtions
         * Unit Testing 
     * Change Appearence
     * Drag and Drop pieces - 
         * Read HTML5 Docs: https://html.spec.whatwg.org/#dnd
-        * Drop Anywhere
-        * Add/Remove pieces from board
-        * Allow Drop on tiles (squares)
+        * Allow Drag and Drop on tiles (squares)
         * Conflict Detection (cant drop on own pieces, remove enemy pieces)
         * Allow Drop on legal moves?
-        * Record and display move List
-        * Allow iteration through moves
     * Learn to use SASS?
     * Read about: systemjs / webpack
 
@@ -56,11 +56,11 @@ less
 ## Create Chessboard
 
 The `<chessboard>` chessboard.component is responsible for generating the board, tiles, and pieces.  
-    * __chessboard.component.html__ (Template) - Lays out the board as 64 div tiles (floated left) within a board ontainer.  Each tile may contain a piece div.  
-    * __chessboard.component.ts__ 
-    * __chessboard.service.ts__ - Responsible for retrieving board setup data. (Tiles, Pieces)
-    * __model.ts__ - Entites (Tile, Piece) and board setup data.
-    * __chessboard.css__ - Originally created in .less... I broke the watcher and started updating it manually.  I plan to give SASS a look later, but for now css 
-      compiling is on hold (NG2 uses SASS, not sure how it all works with components) 
+        + __chessboard.component.html__ (Template) - Lays out the board as 64 div tiles (floated left) within a board ontainer.  Each tile may contain a piece div.  
+        + __chessboard.component.ts__ 
+        + __chessboard.service.ts__ - Responsible for retrieving board setup data. (Tiles, Pieces)
+        + __model.ts__ - Entites (Tile, Piece) and board setup data.
+        + __chessboard.css__ - Originally created in .less... I broke the watcher and started updating it manually.  I plan to give SASS a look later, but for now css 
+        compiling is on hold (NG2 uses SASS, not sure how it all works with components) 
           
     
