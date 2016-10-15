@@ -3,7 +3,6 @@
 ## To Do List
     * ~~Rotate Chessboard~~
     * ~~Click to move~~
-    * ~~Flip Board~~
     * Record and display move List
         * Allow iteration through moves
     * Add/Remove Piece funtions
