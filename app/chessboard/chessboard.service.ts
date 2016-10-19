@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Tile, TILES, Piece, PIECES } from './model';
+import { Tile, TILES, Piece } from './model';
 
 @Injectable()
 export class ChessboardService {
@@ -16,9 +16,9 @@ export class ChessboardService {
         return Promise.resolve(TILES);
     }
 
-    getPieces(): Promise<Piece[]> {    // Async
-        console.log(PIECES);
-        return Promise.resolve(PIECES);
-    }
+    // getPieces(): Promise<Piece[]> {    // Async
+    //     console.log(PIECES);
+    //     return Promise.resolve(PIECES);
+    // }
 
 }

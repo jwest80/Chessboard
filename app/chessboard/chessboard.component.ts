@@ -66,7 +66,7 @@ export class ChessboardComponent implements OnInit {
   }
 
   getPieces(): void {
-    this.chessboardService.getPieces().then(pieces => this.pieces = pieces);
+    // this.chessboardService.getPieces().then(pieces => this.pieces = pieces);
   }
 
   // Init Learn more about Lifecycle Hooks: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html

@@ -54,8 +54,7 @@ var ChessboardComponent = (function () {
         this.chessboardService.getTiles().then(function (tiles) { return _this.tiles = tiles; });
     };
     ChessboardComponent.prototype.getPieces = function () {
-        var _this = this;
-        this.chessboardService.getPieces().then(function (pieces) { return _this.pieces = pieces; });
+        // this.chessboardService.getPieces().then(pieces => this.pieces = pieces);
     };
     // Init Learn more about Lifecycle Hooks: https://angular.io/docs/ts/latest/guide/lifecycle-hooks.html
     ChessboardComponent.prototype.ngOnInit = function () {

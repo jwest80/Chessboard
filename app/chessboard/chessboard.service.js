@@ -20,10 +20,6 @@ var ChessboardService = (function () {
         console.log(model_1.TILES);
         return Promise.resolve(model_1.TILES);
     };
-    ChessboardService.prototype.getPieces = function () {
-        console.log(model_1.PIECES);
-        return Promise.resolve(model_1.PIECES);
-    };
     ChessboardService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

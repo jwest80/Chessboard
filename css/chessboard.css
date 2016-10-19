@@ -21,10 +21,10 @@
     float: left;
 }
 
-.board:not(.flipped) .tile.odd:nth-child(odd) {background: #aaa; }
-.board:not(.flipped) .tile.even:nth-child(even) {background: #aaa; }
-.board.flipped .tile.even:nth-child(odd) {background: #aaa; }
-.board.flipped .tile.odd:nth-child(even) {background: #aaa; }
+.board:not(.flipped) .tile.odd:nth-child(odd) {background: orange; }
+.board:not(.flipped) .tile.even:nth-child(even) {background: orange; }
+.board.flipped .tile.even:nth-child(odd) {background: orange; }
+.board.flipped .tile.odd:nth-child(even) {background: orange; }
 
 .board .tile span.position { position: absolute; margin: 1px 3px; }
 
@@ -46,12 +46,19 @@
     cursor: hand;
 }
 
-.piece.white::after { color: #00f;}
-.piece.black::after { color: #000;}
+/*.piece.white::after { color: #00f;}
+.piece.black::after { color: #000;}*/
 
-.piece.king::after { content: "\2654"; }
-.piece.queen::after { content: "\2655"; }
-.piece.rook::after { content: "\2656"; }
-.piece.bishop::after { content: "\2657"; }
-.piece.knight::after { content: "\2658"; }
-.piece.pawn::after { content: "\2659"; }
+.piece.white.king::after { content: "\2654"; }
+.piece.white.queen::after { content: "\2655"; }
+.piece.white.rook::after { content: "\2656"; }
+.piece.white.bishop::after { content: "\2657"; }
+.piece.white.knight::after { content: "\2658"; }
+.piece.white.pawn::after { content: "\2659"; }
+
+.piece.black.king::after { content: "\265A"; }
+.piece.black.queen::after { content: "\265B"; }
+.piece.black.rook::after { content: "\265C"; }
+.piece.black.bishop::after { content: "\265D"; }
+.piece.black.knight::after { content: "\265E"; }
+.piece.black.pawn::after { content: "\265F"; }
